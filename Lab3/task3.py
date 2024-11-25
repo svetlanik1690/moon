@@ -1,4 +1,3 @@
-# TODO  Напишите функцию count_letters
 def count_letters(str1):
     low_str1 = str1.lower()
     uni_list = []
@@ -6,10 +5,8 @@ def count_letters(str1):
         if i not in uni_list and i.isalpha() == True:
             uni_list.append(i)
     dict1 = {}
-
     for i in uni_list:
         dict1[i] = 0
-
     for s in low_str1:
         if s.isalpha():
             dict1[s] += 1
@@ -23,10 +20,6 @@ def calculate_frequency(poem={"a", 0}):
         poem[i] = float((poem[i] / quantity))
     for i in poem:
         print(f"{i}: {poem[i]:.2f}")
-
-
-# TODO Напишите функцию calculate_frequency
-
 
 main_str = """
 У лукоморья дуб зелёный;
@@ -64,8 +57,5 @@ main_str = """
 Свои мне сказки говорил.
 """
 
-# TODO Распечатайте в столбик букву и её частоту в тексте
-
 ch = count_letters(main_str)
-
 calculate_frequency(ch)
